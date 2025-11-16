@@ -16,6 +16,7 @@ class Booking extends Model
         'price',
         'date',
         'duration',
+        'discount',
         'breakfast',
         'total',
     ];

@@ -20,6 +20,7 @@ return new class extends Migration
             $table->integer('price');
             $table->date('date');
             $table->integer('duration');
+            $table->integer('discount')->nullable();
             $table->boolean('breakfast')->default(false);
             $table->integer('total');
             $table->timestamps();

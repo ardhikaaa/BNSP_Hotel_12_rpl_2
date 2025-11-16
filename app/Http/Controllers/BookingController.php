@@ -61,7 +61,6 @@ class BookingController extends Controller
             $total = $total - ($total * 0.10); // diskon 10%
         }
 
-
         // simpan booking
         Booking::create([
             'nama' => $request->nama,
