@@ -5,188 +5,189 @@
     <div class="absolute inset-0 bg-black opacity-40"></div>
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
         <div class="text-center">
-            <h1 class="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">Tentang Hotel Horizon</h1>
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">Hubungi Kami</h1>
             <p class="text-xl md:text-2xl text-blue-200 max-w-3xl mx-auto">
-                Menyambut Anda dengan Keramahan dan Kemewahan yang Tak Terlupakan
+                Kami Siap Melayani Anda 24/7
             </p>
         </div>
     </div>
 </div>
 
-<!-- Story Section -->
+<!-- Contact Information Section -->
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-    <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div>
-            <h2 class="text-4xl font-bold text-slate-800 mb-6">Cerita Kami</h2>
-            <div class="space-y-4 text-slate-600 text-lg leading-relaxed">
-                <p>
-                    Hotel Horizon berdiri sejak tahun 2015 dengan visi untuk menjadi destinasi pilihan utama bagi 
-                    wisatawan yang mencari pengalaman menginap yang luar biasa. Nama "Horizon" kami pilih karena 
-                    melambangkan harapan, kemungkinan tak terbatas, dan pandangan yang luas—nilai-nilai yang kami 
-                    pegang teguh dalam melayani setiap tamu.
-                </p>
-                <p>
-                    Berlokasi strategis di jantung kota, Hotel Horizon menawarkan akses mudah ke berbagai destinasi 
-                    wisata, pusat bisnis, dan kuliner terbaik. Dengan 150 kamar yang dirancang dengan cermat, kami 
-                    menghadirkan perpaduan sempurna antara kenyamanan modern dan sentuhan hangat keramahan Indonesia.
-                </p>
-                <p>
-                    Setiap detail di Hotel Horizon dirancang dengan perhatian khusus untuk memastikan pengalaman 
-                    menginap Anda tidak hanya nyaman, tetapi juga berkesan dan bermakna.
-                </p>
-            </div>
-        </div>
-        <div class="relative">
-            <div class="bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl h-96 flex items-center justify-center shadow-2xl">
-                <svg class="w-32 h-32 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Values Section -->
-<div class="bg-slate-50 py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold text-slate-800 mb-4">Nilai-Nilai Kami</h2>
-            <p class="text-xl text-slate-600">Prinsip yang Membimbing Setiap Langkah Kami</p>
-        </div>
-        
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                    <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                    </svg>
+    <div class="grid md:grid-cols-2 gap-12">
+        <!-- Contact Cards -->
+        <div class="space-y-6">
+            <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-slate-100">
+                <div class="flex items-start gap-6">
+                    <div class="bg-gradient-to-br from-blue-500 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-3">Alamat Hotel</h3>
+                        <p class="text-slate-600 leading-relaxed text-lg">
+                            Jl. Sudirman Kav. 52-53<br>
+                            Jakarta Selatan 12190<br>
+                            DKI Jakarta, Indonesia
+                        </p>
+                        <p class="text-slate-500 text-sm mt-3">
+                            Berlokasi strategis di jantung kota Jakarta, mudah diakses dari berbagai area
+                        </p>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold text-slate-800 mb-3">Keramahan</h3>
-                <p class="text-slate-600 leading-relaxed">
-                    Kami menyambut setiap tamu dengan senyuman tulus dan pelayanan dari hati, menciptakan 
-                    suasana seperti di rumah sendiri.
-                </p>
             </div>
 
-            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                    <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
+            <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-slate-100">
+                <div class="flex items-start gap-6">
+                    <div class="bg-gradient-to-br from-green-500 to-green-600 w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-3">Nomor Telepon</h3>
+                        <div class="space-y-2">
+                            <div>
+                                <p class="text-slate-500 text-sm">Reservasi & Informasi</p>
+                                <a href="tel:+622157901234" class="text-blue-600 hover:text-blue-700 font-semibold text-lg">
+                                    +62 12 3456 7890
+                                </a>
+                            </div>
+                            <div>
+                                <p class="text-slate-500 text-sm">WhatsApp</p>
+                                <a href="https://wa.me/6281234567890" class="text-green-600 hover:text-green-700 font-semibold text-lg">
+                                    +62 12 3456 7890
+                                </a>
+                            </div>
+                            <div>
+                                <p class="text-slate-500 text-sm">Fax</p>
+                                <p class="text-slate-700 font-semibold text-lg">+62 12 3456 7890</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold text-slate-800 mb-3">Kualitas</h3>
-                <p class="text-slate-600 leading-relaxed">
-                    Standar tinggi dalam setiap aspek—dari kebersihan kamar hingga cita rasa kuliner—adalah 
-                    komitmen kami yang tidak dapat ditawar.
-                </p>
             </div>
 
-            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                    <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
+            <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-slate-100">
+                <div class="flex items-start gap-6">
+                    <div class="bg-gradient-to-br from-purple-500 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-3">Alamat Email</h3>
+                        <div class="space-y-2">
+                            <div>
+                                <p class="text-slate-500 text-sm">Informasi Umum</p>
+                                <a href="mailto:info@hotelhorizon.com" class="text-blue-600 hover:text-blue-700 font-semibold text-lg">
+                                    info@hotelhorizon.com
+                                </a>
+                            </div>
+                            <div>
+                                <p class="text-slate-500 text-sm">Reservasi</p>
+                                <a href="mailto:reservation@hotelhorizon.com" class="text-blue-600 hover:text-blue-700 font-semibold text-lg">
+                                    reservation@hotelhorizon.com
+                                </a>
+                            </div>
+                            <div>
+                                <p class="text-slate-500 text-sm">Event & Meeting</p>
+                                <a href="mailto:event@hotelhorizon.com" class="text-blue-600 hover:text-blue-700 font-semibold text-lg">
+                                    event@hotelhorizon.com
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold text-slate-800 mb-3">Inovasi</h3>
-                <p class="text-slate-600 leading-relaxed">
-                    Kami terus berinovasi dalam layanan dan fasilitas untuk memberikan pengalaman menginap 
-                    yang selalu fresh dan relevan.
-                </p>
             </div>
         </div>
-    </div>
-</div>
 
-<!-- Facilities Section -->
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-    <div class="text-center mb-16">
-        <h2 class="text-4xl font-bold text-slate-800 mb-4">Fasilitas Premium</h2>
-        <p class="text-xl text-slate-600">Kemudahan dan Kenyamanan untuk Setiap Kebutuhan Anda</p>
-    </div>
+        <!-- Map & Operating Hours -->
+        <div class="space-y-6">
+            <!-- Map Placeholder -->
+            <div class="bg-white p-6 rounded-2xl shadow-lg border border-slate-100">
+                <h3 class="text-2xl font-bold text-slate-800 mb-4">Lokasi Kami</h3>
+                <div class="bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl h-80 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <svg class="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                        </svg>
+                        <p class="text-lg">Google Maps Integration</p>
+                        <a href="https://maps.google.com" target="_blank" class="inline-block mt-3 px-6 py-2 bg-white text-blue-600 rounded-full font-semibold hover:bg-blue-50 transition-colors">
+                            Lihat di Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="text-center p-6 hover:bg-slate-50 rounded-lg transition-colors">
-            <div class="bg-gradient-to-br from-blue-500 to-blue-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                </svg>
+            <!-- Operating Hours -->
+            <div class="bg-white p-6 rounded-2xl shadow-lg border border-slate-100">
+                <h3 class="text-2xl font-bold text-slate-800 mb-4">Jam Operasional</h3>
+                <div class="space-y-3">
+                    <div class="flex justify-between items-center py-2 border-b border-slate-100">
+                        <span class="text-slate-600 font-medium">Front Desk</span>
+                        <span class="text-slate-800 font-semibold">24 Jam</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-slate-100">
+                        <span class="text-slate-600 font-medium">Restoran</span>
+                        <span class="text-slate-800 font-semibold">06:00 - 23:00</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-slate-100">
+                        <span class="text-slate-600 font-medium">Spa & Fitness</span>
+                        <span class="text-slate-800 font-semibold">07:00 - 21:00</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2">
+                        <span class="text-slate-600 font-medium">Room Service</span>
+                        <span class="text-slate-800 font-semibold">24 Jam</span>
+                    </div>
+                </div>
             </div>
-            <h3 class="font-bold text-slate-800 mb-2">150 Kamar</h3>
-            <p class="text-slate-600 text-sm">Beragam tipe kamar untuk setiap kebutuhan</p>
-        </div>
 
-        <div class="text-center p-6 hover:bg-slate-50 rounded-lg transition-colors">
-            <div class="bg-gradient-to-br from-purple-500 to-purple-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
-            </div>
-            <h3 class="font-bold text-slate-800 mb-2">Restoran & Cafe</h3>
-            <p class="text-slate-600 text-sm">Kuliner nusantara dan internasional</p>
-        </div>
-
-        <div class="text-center p-6 hover:bg-slate-50 rounded-lg transition-colors">
-            <div class="bg-gradient-to-br from-green-500 to-green-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-            </div>
-            <h3 class="font-bold text-slate-800 mb-2">Meeting Rooms</h3>
-            <p class="text-slate-600 text-sm">Ruang pertemuan dengan teknologi modern</p>
-        </div>
-
-        <div class="text-center p-6 hover:bg-slate-50 rounded-lg transition-colors">
-            <div class="bg-gradient-to-br from-orange-500 to-orange-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-            </div>
-            <h3 class="font-bold text-slate-800 mb-2">Spa & Fitness</h3>
-            <p class="text-slate-600 text-sm">Relaksasi dan kebugaran optimal</p>
-        </div>
-    </div>
-</div>
-
-<!-- Team Section -->
-<div class="bg-gradient-to-br from-slate-800 to-slate-900 text-white py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-4xl font-bold mb-6">Tim Kami</h2>
-        <p class="text-xl text-blue-200 max-w-3xl mx-auto mb-12">
-            Dibalik pengalaman luar biasa setiap tamu, terdapat tim profesional yang berdedikasi dan 
-            berpengalaman lebih dari 10 tahun di industri perhotelan. Kami siap melayani Anda 24/7 
-            dengan sepenuh hati.
-        </p>
-        <div class="grid md:grid-cols-3 gap-8 text-center">
-            <div>
-                <div class="text-5xl font-bold text-blue-400 mb-2">150+</div>
-                <div class="text-slate-300">Staf Profesional</div>
-            </div>
-            <div>
-                <div class="text-5xl font-bold text-blue-400 mb-2">50K+</div>
-                <div class="text-slate-300">Tamu Puas</div>
-            </div>
-            <div>
-                <div class="text-5xl font-bold text-blue-400 mb-2">9+</div>
-                <div class="text-slate-300">Tahun Pengalaman</div>
+            <!-- Social Media -->
+            <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl shadow-lg text-white">
+                <h3 class="text-2xl font-bold mb-4">Ikuti Kami</h3>
+                <div class="flex gap-4">
+                    <a href="#" class="bg-white/10 hover:bg-white/20 w-12 h-12 rounded-full flex items-center justify-center transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="bg-white/10 hover:bg-white/20 w-12 h-12 rounded-full flex items-center justify-center transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/>
+                            <path d="M12 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="bg-white/10 hover:bg-white/20 w-12 h-12 rounded-full flex items-center justify-center transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 <!-- CTA Section -->
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-    <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-center text-white shadow-2xl">
-        <h2 class="text-4xl font-bold mb-4">Siap Merasakan Pengalaman Horizon?</h2>
-        <p class="text-xl mb-8 text-blue-100">
-            Jadilah bagian dari keluarga besar Hotel Horizon dan nikmati pengalaman menginap yang tak terlupakan
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/booking/create" class="bg-white text-blue-600 px-8 py-4 rounded-full font-bold hover:bg-blue-50 transition-colors inline-block">
-                Pesan Sekarang
-            </a>
-            <a href="#" class="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-blue-600 transition-colors inline-block">
-                Hubungi Kami
-            </a>
+<div class="bg-slate-50 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-center text-white shadow-2xl">
+            <h2 class="text-4xl font-bold mb-4">Butuh Bantuan?</h2>
+            <p class="text-xl mb-8 text-blue-100">
+                Tim kami siap membantu Anda 24/7. Jangan ragu untuk menghubungi kami kapan saja!
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:+622157901234" class="bg-white text-blue-600 px-8 py-4 rounded-full font-bold hover:bg-blue-50 transition-colors inline-block">
+                    Hubungi Sekarang
+                </a>
+                <a href="mailto:info@hotelhorizon.com" class="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-blue-600 transition-colors inline-block">
+                    Kirim Email
+                </a>
+            </div>
         </div>
     </div>
 </div>

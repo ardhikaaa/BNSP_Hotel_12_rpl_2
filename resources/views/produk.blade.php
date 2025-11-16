@@ -14,10 +14,6 @@
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
         }
         
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-        }
-        
         .hero-section {
             background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
             position: relative;
@@ -51,7 +47,7 @@
         
         .card img {
             width: 100%;
-            height: 180px;
+            height: 250px;
             object-fit: cover;
             transition: transform 0.6s ease;
         }
@@ -65,7 +61,7 @@
         }
         
         .card-body h3 {
-            margin: 15px 0 12px;
+            margin: 0 0 12px;
             font-size: 1.5rem;
             font-weight: 600;
             color: #1f2937;
@@ -167,53 +163,239 @@
         .grid > .card:nth-child(4) { animation-delay: 0.4s; }
         .grid > .card:nth-child(5) { animation-delay: 0.5s; }
         .grid > .card:nth-child(6) { animation-delay: 0.6s; }
+
+        /* Play button overlay styling */
+        .play-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card:hover .play-overlay {
+            opacity: 1;
+        }
+
+        .play-button {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 50%;
+            padding: 1.2rem;
+            transform: scale(1);
+            transition: transform 0.3s ease;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card:hover .play-button {
+            transform: scale(1.15);
+        }
+
+        /* Video button styling */
+        .video-button {
+            margin-top: 1rem;
+            width: 100%;
+            padding: 0.625rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 0.5rem;
+            transition: all 0.2s ease;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #374151;
+            background: white;
+            cursor: pointer;
+        }
+
+        .video-button:hover {
+            border-color: #f59e0b;
+            background: #fffbeb;
+            color: #f59e0b;
+        }
+
+        /* Modal styling */
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95) translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .animate-modal {
+            animation: modalFadeIn 0.3s ease-out;
+        }
+
+        #videoModal {
+            backdrop-filter: blur(8px);
+        }
+
+        body.modal-open {
+            overflow: hidden;
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            border-bottom: 2px solid #f59e0b;
+        }
+
+        .modal-header h3 {
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .modal-close-btn {
+            color: #9ca3af;
+            transition: all 0.2s ease;
+            padding: 0.5rem;
+            border-radius: 9999px;
+        }
+
+        .modal-close-btn:hover {
+            color: #f59e0b;
+            background: rgba(245, 158, 11, 0.1);
+        }
     </style>
 </head>
 <body>
     <x-navbar/>
     
-    <!-- Hero Section -->
-    <div class="hero-section py-24 px-4 mt-20">
-        <div class="max-w-7xl mx-auto">
-            <div class="title-section">
-                <div class="inline-block mb-4">
-                    <span class="px-4 py-2 bg-amber-500 bg-opacity-20 text-amber-400 text-sm font-medium rounded-full backdrop-blur-sm border border-amber-500 border-opacity-30">
-                        Horizon Collection
-                    </span>
+<!-- Hero Section -->
+<div class="hero-section py-24 px-4 mt-20">
+    <div class="max-w-7xl mx-auto">
+        <div class="title-section">
+            <div class="inline-block mb-4">
+                <span class="px-4 py-2 bg-amber-500 bg-opacity-20 text-amber-400 text-sm font-medium rounded-full backdrop-blur-sm border border-amber-500 border-opacity-30">
+                    Horizon Collection
+                </span>
+            </div>
+            <h1>Luxury Rooms & Suites</h1>
+            <p>Experience unparalleled comfort and elegance in our accommodations</p>
+        </div>
+    </div>
+</div>
+
+<div class="container max-w-7xl mx-auto px-4 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        @foreach($products as $product)
+            <div class="card opacity-0">
+                <div class="relative overflow-hidden" >
+                    <img src="{{ asset('storage/' . $product->img) }}" 
+                            alt="{{ $product->room_type }}">
+                    <span class="luxury-badge">{{ $product->room_type }}</span>
                 </div>
-                <h1>Luxury Rooms & Suites</h1>
-                <p>Experience unparalleled comfort and elegance in our accommodations</p>
+
+                <div class="card-body">
+                    <h3>{{ $product->room_type }}</h3>
+                    
+                    <div class="mt-4 flex items-center justify-between">
+                        <p class="price">Rp {{ number_format($product->price, 0, ',', '.') }}</p>
+                        <span class="text-xs text-gray-500">per night</span>
+                    </div>
+                    
+                    <!-- Button untuk lihat video -->
+                    <button onclick="openVideoModal('{{ $product->video }}', '{{ $product->room_type }}')" 
+                            class="video-button">
+                        <span class="flex items-center justify-center gap-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/>
+                            </svg>
+                            Watch Room Tour
+                        </span>
+                    </button>
+                </div>
+            </div>
+        @endforeach
+    </div>
+</div>
+
+<!-- Video Modal -->
+<div id="videoModal" class="fixed inset-0 bg-black/85 z-50 hidden items-center justify-center p-4">
+    <div class="relative w-full max-w-3xl bg-white rounded-2xl shadow-2xl overflow-hidden animate-modal">
+        <!-- Modal Header -->
+        <div class="modal-header flex items-center justify-between p-6">
+            <h3 id="modalTitle" class="font-semibold">Room Tour</h3>
+            <button onclick="closeVideoModal()" class="modal-close-btn">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Modal Body -->
+        <div class="p-6 bg-gray-50">
+            <div class="relative" style="padding-bottom: 56.25%; height: 0;">
+                <iframe id="videoFrame"
+                        class="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                </iframe>
             </div>
         </div>
     </div>
-    
-    <div class="container max-w-7xl mx-auto px-4 py-16">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            @foreach($products as $product)
-                <div class="card opacity-0">
-                    <div class="relative overflow-hidden">
-                        <img src="{{ asset('storage/' . $product->img) }}" alt="{{ $product->room_type }}">
-                        <span class="luxury-badge">{{ $product->room_type }}</span>
-                    </div>
+</div>
 
-                    <div class="card-body">
+<script>
+    function openVideoModal(videoUrl, roomType) {
+        const modal = document.getElementById('videoModal');
+        const videoFrame = document.getElementById('videoFrame');
+        const modalTitle = document.getElementById('modalTitle');
+        
+        // Set video source
+        videoFrame.src = videoUrl;
+        
+        // Set modal title
+        modalTitle.textContent = roomType + ' - Room Tour';
+        
+        // Show modal
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        
+        // Prevent body scroll
+        document.body.classList.add('modal-open');
+        
+        // Add escape key listener
+        document.addEventListener('keydown', handleEscapeKey);
+    }
 
-                        <iframe 
-                            src="{{ $product->video }}"
-                            class="w-full h-[180px] rounded-lg mt-3"
-                            allowfullscreen>
-                        </iframe>
+    function closeVideoModal() {
+        const modal = document.getElementById('videoModal');
+        const videoFrame = document.getElementById('videoFrame');
+        
+        // Hide modal
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        
+        // Stop video by clearing src
+        videoFrame.src = '';
+        
+        // Allow body scroll
+        document.body.classList.remove('modal-open');
+        
+        // Remove escape key listener
+        document.removeEventListener('keydown', handleEscapeKey);
+    }
 
-                        <h3>{{ $product->room_type }}</h3>
+    function handleEscapeKey(e) {
+        if (e.key === 'Escape') {
+            closeVideoModal();
+        }
+    }
 
-                        <div class="mt-4 flex items-center justify-between">
-                            <p class="price">Rp {{ number_format($product->price, 0, ',', '.') }}</p>
-                            <span class="text-xs text-gray-500">per night</span>
-                        </div>
-                    </div>
-                </div>
-            @endforeach
-        </div>
-    </div>
+    // Close modal when clicking outside
+    document.addEventListener('DOMContentLoaded', function() {
+        const modal = document.getElementById('videoModal');
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeVideoModal();
+            }
+        });
+    });
+</script>
 </body>
 </html>
