@@ -217,6 +217,9 @@
                     <input type="text" name="identitas" id="identitas" required inputmode="numeric" pattern="^\+?\d+$" oninput="this.value=this.value.replace(/[^0-9+]/g,'').replace(/(?!^)\+/g,'')"
                         class="form-input w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
                         placeholder="Contoh: 3201234567890001">
+                        <p id="identitas_error" class="text-red-600 text-sm mt-1 hidden">
+                            Nomor identitas harus 16 angka.
+                        </p>
                 </div>
 
                 <!-- Pilih Kamar -->
@@ -364,6 +367,20 @@
         }
 
         btnHitung?.addEventListener('click', hitungTotal);
+
+        const inputIdentitas = document.getElementById('identitas');
+        const identitasError = document.getElementById('identitas_error');
+
+        inputIdentitas.addEventListener('input', function () {
+            const val = inputIdentitas.value.trim();
+
+            if (val.length !== 16) {
+                identitasError.classList.remove('hidden');
+            } else {
+                identitasError.classList.add('hidden');
+            }
+        });
+
     })();
 </script>
 </html>

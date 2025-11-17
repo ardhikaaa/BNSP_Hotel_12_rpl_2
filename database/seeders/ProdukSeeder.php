@@ -12,21 +12,21 @@ class ProdukSeeder extends Seeder
         DB::table('produks')->insert([
             [
                 'img' => 'produk/deluxe-room.jpg',
-                'video' => 'https://www.youtube.com/embed/NwrVsCQtKqQ',
+                'video' => 'https://www.youtube.com/embed/QDIPsdoOPEM',
                 'room_type' => 'Deluxe Room',
-                'price' => 500000,
+                'price' => 750000,
             ],
             [
                 'img' => 'produk/standard-room.jpg',
                 'video' => 'https://www.youtube.com/embed/NwrVsCQtKqQ',
                 'room_type' => 'Standard Room',
-                'price' => 350000,
+                'price' => 500000,
             ],
             [
                 'img' => 'produk/family-room.jpg',
-                'video' => 'https://www.youtube.com/embed/NwrVsCQtKqQ',
+                'video' => 'https://www.youtube.com/embed/dpl9q-yd7nU',
                 'room_type' => 'Family Room',
-                'price' => 250000,
+                'price' => 350000,
             ],
         ]);
     }

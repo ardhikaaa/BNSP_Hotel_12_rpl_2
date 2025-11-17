@@ -53,12 +53,17 @@ class BookingController extends Controller
         // hitung biaya breakfast
         $breakfastCost = $breakfast ? (80000 * $duration) : 0;
 
+        $discount = 0;
+        if ($duration >= 3) {
+            $discount = 10; // persen
+        }
+
         // total awal (harga kamar + breakfast)
         $total = $roomCost + $breakfastCost;
 
-        // diskon jika lebih dari 3 malam
-        if ($duration > 3) {
-            $total = $total - ($total * 0.10); // diskon 10%
+        // pakai field discount
+        if ($discount > 0) {
+            $total = $total - ($roomCost * ($discount / 100));
         }
 
         // simpan booking
@@ -70,6 +75,7 @@ class BookingController extends Controller
             'price' => $price,
             'date' => $request->date,
             'duration' => $duration,
+            'discount' => $discount,
             'breakfast' => $breakfast,
             'total' => $total,
         ]);

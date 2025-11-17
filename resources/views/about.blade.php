@@ -181,7 +181,7 @@
                 Tim kami siap membantu Anda 24/7. Jangan ragu untuk menghubungi kami kapan saja!
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="tel:+622157901234" class="bg-white text-blue-600 px-8 py-4 rounded-full font-bold hover:bg-blue-50 transition-colors inline-block">
+                <a href="#" class="bg-white text-blue-600 px-8 py-4 rounded-full font-bold hover:bg-blue-50 transition-colors inline-block">
                     Hubungi Sekarang
                 </a>
                 <a href="mailto:info@hotelhorizon.com" class="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-blue-600 transition-colors inline-block">
