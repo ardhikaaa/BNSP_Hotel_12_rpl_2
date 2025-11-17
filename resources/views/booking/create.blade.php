@@ -167,7 +167,7 @@
             </div>
 
             <!-- Form Body -->
-            <form action="{{ route('booking.store') }}" method="POST" class="p-8 space-y-6">
+            <form action="{{ route('booking.store') }}" id="form" method="POST" class="p-8 space-y-6">
                 @csrf
 
                 <!-- Nama Lengkap -->
@@ -379,6 +379,22 @@
             } else {
                 identitasError.classList.add('hidden');
             }
+        });
+
+        const form = document.querySelector('form');
+
+        form.addEventListener('submit', function (e) {
+            const val = inputIdentitas.value.trim();
+
+            if (val.length !== 16) {
+                e.preventDefault();
+                identitasError.classList.remove('hidden');
+                inputIdentitas.focus();
+            }
+        });
+
+        document.getElementById('nama').addEventListener('input', function() {
+            this.value = this.value.replace(/[^A-Za-z\s]/g, '');
         });
 
     })();

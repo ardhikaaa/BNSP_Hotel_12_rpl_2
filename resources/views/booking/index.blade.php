@@ -8,7 +8,6 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
     </style>
-    
 </head>
 <body class="bg-gray-50">
     <x-navbar/>
@@ -44,6 +43,7 @@
                                 <th class="py-3 px-4 font-semibold">Durasi</th>
                                 <th class="py-3 px-4 font-semibold">Breakfast</th>
                                 <th class="py-3 px-4 font-semibold">Total</th>
+                                <th class="py-3 px-1 font-semibold"></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -75,6 +75,13 @@
                                         </span>
                                     </td>
                                     <td class="py-3 px-4 text-amber-600 font-bold">Rp {{ isset($item->total) ? number_format($item->total, 0, ',', '.') : '-' }}</td>
+                                    <td class="py-3 px-1 text-amber-600 font-bold">
+                                        <button onclick="openModal({{ $loop->index }})" class="hover:bg-amber-100 p-1 rounded transition-colors">
+                                            <svg class="w-5 h-5 text-amber-600" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="m18.5,17c0,.829-.671,1.5-1.5,1.5s-1.5-.671-1.5-1.5.671-1.5,1.5-1.5,1.5.671,1.5,1.5Zm5.207,6.707c-.195.195-.451.293-.707.293s-.512-.098-.707-.293l-1.822-1.822c-.981.699-2.177,1.115-3.471,1.115-3.308,0-6-2.692-6-6s2.692-6,6-6,6,2.692,6,6c0,1.294-.416,2.49-1.115,3.471l1.822,1.822c.391.391.391,1.023,0,1.414Zm-2.966-5.878c.334-.501.334-1.157,0-1.659-.632-.949-1.82-2.171-3.741-2.171-1.97,0-3.168,1.284-3.787,2.241-.294.454-.294,1.064,0,1.518.62.957,1.819,2.241,3.787,2.241,2.001,0,3.453-1.738,3.741-2.171Zm-7.741-9.829h6.54c-.347-.913-.88-1.753-1.591-2.464l-3.484-3.486c-.712-.711-1.552-1.244-2.465-1.59v6.54c0,.551.448,1,1,1Zm-4,9c0-3.01,1.673-5.635,4.136-7h-.136c-1.654,0-3-1.346-3-3V.024c-.161-.011-.322-.024-.485-.024h-4.515C2.243,0,0,2.243,0,5v14c0,2.757,2.243,5,5,5h8.136c-2.463-1.365-4.136-3.99-4.136-7Z"/>
+                                            </svg>
+                                        </button>
+                                    </td>
                                 </tr>
                             @empty
                                 <tr>
@@ -89,6 +96,158 @@
             @endisset
         </div>
     </div>
+
+    <!-- Modal Detail -->
+    <div id="detailModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <!-- Modal Header -->
+            <div class="bg-amber-500 text-white px-6 py-4 rounded-t-xl flex items-center justify-between">
+                <h2 class="text-xl font-semibold">Detail Pemesanan</h2>
+                <button onclick="closeModal()" class="hover:bg-amber-600 rounded-full p-1 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="p-6 space-y-3">
+                <!-- Nama Pemesan -->
+                <div class="flex">
+                    <p class="text-gray-600 w-48">Nama Pemesan</p>
+                    <p class="text-gray-800">: <span id="modal-nama" class="font-medium">-</span></p>
+                </div>
+
+                <!-- Nomor Identitas -->
+                <div class="flex">
+                    <p class="text-gray-600 w-48">Nomor Identitas</p>
+                    <p class="text-gray-800">: <span id="modal-identitas" class="font-medium">-</span></p>
+                </div>
+
+                <!-- Jenis Kelamin -->
+                <div class="flex">
+                    <p class="text-gray-600 w-48">Jenis Kelamin</p>
+                    <p class="text-gray-800">: <span id="modal-jk" class="font-medium">-</span></p>
+                </div>
+
+                <!-- Tipe Kamar -->
+                <div class="flex">
+                    <p class="text-gray-600 w-48">Tipe Kamar</p>
+                    <p class="text-gray-800">: <span id="modal-room-type" class="font-medium">-</span></p>
+                </div>
+
+                <!-- Duras Penginapan -->
+                <div class="flex">
+                    <p class="text-gray-600 w-48">Durasi Penginapan</p>
+                    <p class="text-gray-800">: <span id="modal-duration" class="font-medium">-</span></p>
+                </div>
+
+                <!-- Harga Awal -->
+                <div class="flex">
+                    <p class="text-gray-600 w-48">Harga Awal</p>
+                    <p class="text-gray-800">: <span id="modal-price" class="font-medium">-</span></p>
+                </div>
+
+                <!-- Discount -->
+                <div class="flex">
+                    <p class="text-gray-600 w-48">Discount</p>
+                    <p class="text-gray-800">: <span id="modal-discount" class="font-medium">-</span> <span id="modal-discount-nominal" class="font-medium text-amber-600">-</span></p>
+                </div>
+
+                <!-- Total Bayar -->
+                <div class="flex">
+                    <p class="text-gray-600 w-48">Total Bayar</p>
+                    <p class="text-gray-800">: <span id="modal-total" class="font-medium">-</span></p>
+                </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="bg-gray-50 px-6 py-4 rounded-b-xl flex justify-end">
+                <button onclick="closeModal()" class="px-6 py-2 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-colors">
+                    Tutup
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Data booking dari Laravel
+        const bookingData = @json($booking ?? []);
+
+       function openModal(index) {
+            const item = bookingData[index];
+
+            // Isi modal
+            document.getElementById('modal-nama').textContent = item.nama || '-';
+            document.getElementById('modal-identitas').textContent = item.identitas || '-';
+            document.getElementById('modal-jk').textContent = item.jk || '-';
+            document.getElementById('modal-room-type').textContent = item.produk?.room_type || '-';
+            document.getElementById('modal-duration').textContent = (item.duration || '-') + ' Hari';
+
+            // Ambil nilai dari item
+            const price = item.price || 0;
+            const duration = item.duration || 0;
+            const discount = item.discount || 0;
+
+            // subtotal kamar
+            const roomSubtotal = price * duration;
+
+            // harga breakfast per malam (manual 80.000)
+            const breakfastPrice = item.breakfast ? 80000 : 0;
+
+            // subtotal breakfast
+            const breakfastSubtotal = breakfastPrice * duration;
+
+            // harga awal sebelum diskon
+            const subtotal = roomSubtotal + breakfastSubtotal;
+
+            // nilai diskon
+            const discountNominal = (roomSubtotal * discount) / 100;
+
+            // tampilkan harga awal
+            document.getElementById('modal-price').textContent = formatNumber(subtotal);
+
+            // tampilkan diskon
+            document.getElementById('modal-discount').textContent =
+                discount > 0 ? discount + '%' : '0%';
+
+            document.getElementById('modal-discount-nominal').textContent =
+                discountNominal > 0 ? '(Rp ' + formatNumber(discountNominal) + ')' : '';
+
+            // tampilkan total akhir
+            document.getElementById('modal-total').textContent =
+                item.total ? formatNumber(item.total) : '-';
+
+            // buka modal
+            document.getElementById('detailModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+
+
+        function closeModal() {
+            document.getElementById('detailModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function formatNumber(num) {
+            return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        }
+
+        // Tutup modal jika klik di luar
+        document.getElementById('detailModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Tutup modal dengan ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
 
 </body>
 </html>
