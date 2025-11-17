@@ -1,5 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tentang Horizon Hotel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
 <x-navbar />
-
 <!-- Hero Section -->
 <div class="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white mt-20">
     <div class="absolute inset-0 bg-black opacity-40"></div>
@@ -191,3 +200,6 @@
         </div>
     </div>
 </div>
+
+</body>
+</html>
